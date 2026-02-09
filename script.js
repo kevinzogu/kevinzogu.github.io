@@ -52,9 +52,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ===== Mobile Navigation Toggle =====
+// Create overlay element for mobile menu
+const overlay = document.createElement('div');
+overlay.className = 'menu-overlay';
+document.body.appendChild(overlay);
+
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     navToggle.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+});
+
+// Close mobile menu when clicking overlay
+overlay.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    navToggle.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
 });
 
 // Close mobile menu when clicking a link
@@ -62,7 +77,19 @@ navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         navToggle.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
     });
+});
+
+// Close mobile menu on window resize (if screen becomes larger)
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
 });
 
 // ===== Navbar Scroll Effect =====
