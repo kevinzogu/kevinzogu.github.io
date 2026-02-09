@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Kevin Zogu | Senior Software Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .cv-container {
+            max-width: 210mm;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Header Section - Europass Style */
+        .header {
+            display: flex;
+            padding: 30px 40px;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+        }
+
+        .photo-container {
+            flex-shrink: 0;
+            margin-right: 30px;
+        }
+
+        .photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .header-info {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .name {
+            font-size: 28pt;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .title {
+            font-size: 12pt;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 15px;
+        }
+
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 10pt;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-item svg {
+            width: 16px;
+            height: 16px;
+            fill: white;
+            opacity: 0.9;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            width: 35%;
+            background: #f8fafc;
+            padding: 25px 20px;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        /* Right Content */
+        .content {
+            width: 65%;
+            padding: 25px 30px;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            font-weight: 700;
+            color: #1e3a5f;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #1e3a5f;
+            margin-bottom: 15px;
+        }
+
+        /* Skills */
+        .skill-category {
+            margin-bottom: 12px;
+        }
+
+        .skill-label {
+            font-weight: 600;
+            font-size: 10pt;
+            color: #1e3a5f;
+            margin-bottom: 4px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .skill-tag {
+            background: #e2e8f0;
+            color: #2d3748;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 9pt;
+        }
+
+        /* Languages */
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .language-item:last-child {
+            border-bottom: none;
+        }
+
+        .language-name {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .language-level {
+            font-size: 9pt;
+            color: #718096;
+        }
+
+        /* Certifications */
+        .cert-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .cert-item:last-child {
+            border-bottom: none;
+        }
+
+        .cert-name {
+            font-weight: 600;
+            font-size: 9.5pt;
+            color: #2d3748;
+        }
+
+        .cert-issuer {
+            font-size: 9pt;
+            color: #718096;
+        }
+
+        /* Additional Info */
+        .info-item {
+            display: flex;
+            padding: 6px 0;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            width: 100px;
+            font-size: 10pt;
+        }
+
+        .info-value {
+            color: #4a5568;
+            font-size: 10pt;
+        }
+
+        /* Professional Summary */
+        .summary-text {
+            text-align: justify;
+            color: #4a5568;
+            font-size: 10.5pt;
+            line-height: 1.6;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .exp-title {
+            font-weight: 700;
+            font-size: 11pt;
+            color: #1e3a5f;
+        }
+
+        .exp-company {
+            font-weight: 600;
+            font-size: 10pt;
+            color: #2d3748;
+        }
+
+        .exp-date {
+            font-size: 9.5pt;
+            color: #718096;
+            background: #e2e8f0;
+            padding: 3px 12px;
+            border-radius: 15px;
+            white-space: nowrap;
+        }
+
+        .exp-duties {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .exp-duties li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 5px;
+            font-size: 10pt;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+
+        .exp-duties li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #1e3a5f;
+            font-size: 10pt;
+        }
+
+        /* Education */
+        .edu-item {
+            margin-bottom: 15px;
+        }
+
+        .edu-degree {
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #1e3a5f;
+        }
+
+        .edu-school {
+            font-weight: 600;
+            font-size: 10pt;
+            color: #2d3748;
+        }
+
+        .edu-date {
+            font-size: 9pt;
+            color: #718096;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            font-size: 9pt;
+            color: #718096;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                margin: 0;
+                max-width: 100%;
+            }
+
+            .header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .sidebar {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .section {
+                break-inside: avoid;
+            }
+
+            .experience-item {
+                break-inside: avoid;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="photo-container">
+                <img src="https://media.licdn.com/dms/image/v2/C4E03AQFMqGF5IIm4ew/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1656440824014?e=1772064000&v=beta&t=rzmcJJpKqktpFVHDhKQhiz5ySDoM8aUJdXQU8PWe96w" alt="Kevin Zogu" class="photo">
+            </div>
+            <div class="header-info">
+                <h1 class="name">Kevin Zogu</h1>
+                <p class="title">Senior Software Developer | Senior Software Engineer | Trainer – Software Development</p>
+                <div class="contact-row">
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        <span>+355 68 39 03 809</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <a href="mailto:kevinzogu@gmail.com">kevinzogu@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                        <a href="https://www.linkedin.com/in/kevin-zogu-b08ab0112/" target="_blank">linkedin.com/in/kevinzogu</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <span>Tirana, Albania</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Technical Skills -->
+                <section class="section">
+                    <h2 class="section-title">Technical Skills</h2>
+                    
+                    <div class="skill-category">
+                        <div class="skill-label">Languages</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">PL/SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-label">Frameworks</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">Spring Data</span>
+                            <span class="skill-tag">Spring Security</span>
+                            <span class="skill-tag">Hibernate</span>
+                            <span class="skill-tag">OracleJet</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-label">Databases</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Oracle Database</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MySQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-label">Tools & Practices</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Apache Kafka</span>
+                            <span class="skill-tag">RESTful APIs</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">JDBC</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-label">Expertise</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Software Architecture</span>
+                            <span class="skill-tag">System Integration</span>
+                            <span class="skill-tag">Data Migration</span>
+                            <span class="skill-tag">Software Testing</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Languages -->
+                <section class="section">
+                    <h2 class="section-title">Languages</h2>
+                    <div class="language-item">
+                        <span class="language-name">Albanian</span>
+                        <span class="language-level">Native</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">English</span>
+                        <span class="language-level">B2/C1 Professional</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">Italian</span>
+                        <span class="language-level">A2 Basic</span>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="section">
+                    <h2 class="section-title">Education</h2>
+                    <div class="edu-item">
+                        <div class="edu-degree">Master of Science - Informatics</div>
+                        <div class="edu-school">University of Tirana</div>
+                        <div class="edu-date">Nov 2022 - Jul 2024</div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-degree">Bachelor's Degree - Informatics</div>
+                        <div class="edu-school">University of Tirana</div>
+                        <div class="edu-date">Oct 2019 - Jul 2022</div>
+                    </div>
+                </section>
+
+                <!-- Certifications -->
+                <section class="section">
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="cert-item">
+                        <div class="cert-name">DevOps: The Big Picture</div>
+                        <div class="cert-issuer">Pluralsight</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Spring Framework: Spring MVC 5</div>
+                        <div class="cert-issuer">Pluralsight</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Testing Java with JUnit 5 & Mockito</div>
+                        <div class="cert-issuer">Udemy</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Designing RESTful Web APIs</div>
+                        <div class="cert-issuer">Pluralsight</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Web Security Foundations</div>
+                        <div class="cert-issuer">LinkedIn Learning</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Effective Communication</div>
+                        <div class="cert-issuer">AIEx Austria</div>
+                    </div>
+                </section>
+
+                <!-- Additional Info -->
+                <section class="section">
+                    <h2 class="section-title">Additional Info</h2>
+                    <div class="info-item">
+                        <span class="info-label">Driving Licence</span>
+                        <span class="info-value">Category B</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Availability</span>
+                        <span class="info-value">Upon notice period</span>
+                    </div>
+                </section>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="content">
+                <!-- Professional Summary -->
+                <section class="section">
+                    <h2 class="section-title">Professional Summary</h2>
+                    <p class="summary-text">
+                        Results-driven Senior Software Developer with 4+ years of experience in enterprise software development, specialising in Java-based solutions for the banking and gaming industries. Proven track record in designing, developing, and maintaining mission-critical applications using Spring Boot, Oracle technologies, and microservices architecture. Successfully led technical teams through complex system upgrades and delivered solutions that enhanced operational efficiency and regulatory compliance.
+                    </p>
+                    <p class="summary-text" style="margin-top: 10px;">
+                        Demonstrated expertise in bridging technical development with knowledge transfer, combining hands-on software engineering with academic instruction. Committed to delivering high-quality, scalable solutions whilst adhering to European banking standards and best practices. Strong communicator with the ability to collaborate effectively across multicultural and cross-functional teams.
+                    </p>
+                </section>
+
+                <!-- Professional Experience -->
+                <section class="section">
+                    <h2 class="section-title">Professional Experience</h2>
+
+                    <!-- Senior Software Developer -->
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-title">Senior Software Developer</div>
+                                <div class="exp-company">Sisal Hub Albania</div>
+                            </div>
+                            <span class="exp-date">Jun 2025 - Present</span>
+                        </div>
+                        <ul class="exp-duties">
+                            <li>Architect and develop high-performance software solutions for a leading European gaming platform, serving users across multiple markets</li>
+                            <li>Design and implement Game Play Integration (GPI) modules, enabling seamless connectivity with multiple external gaming providers</li>
+                            <li>Build and maintain scalable RESTful APIs processing high-volume transactions for internal and B2B partners</li>
+                            <li>Lead code review processes and establish quality standards, significantly reducing production defects</li>
+                            <li>Implement event-driven architecture using Apache Kafka for real-time data streaming and analytics</li>
+                            <li>Deploy and manage containerised microservices using Docker and Kubernetes</li>
+                            <li>Collaborate with international teams across Italy and Albania to deliver aligned business solutions</li>
+                        </ul>
+                    </div>
+
+                    <!-- Software Developer -->
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-title">Software Developer</div>
+                                <div class="exp-company">Facilization</div>
+                            </div>
+                            <span class="exp-date">Nov 2023 - Jun 2025</span>
+                        </div>
+                        <ul class="exp-duties">
+                            <li>Spearheaded development and integration of Oracle Flexcube Universal Banking and OBPM solutions for multiple financial institutions across Europe and the Middle East</li>
+                            <li>Led requirements analysis and authored comprehensive FS, RS, and DS documentation</li>
+                            <li>Managed technical teams during critical Flexcube 14.7 version upgrade projects, ensuring zero-downtime migrations</li>
+                            <li>Engineered payment processing modules compliant with SWIFT, SEPA, and TARGET2 European payment networks</li>
+                            <li>Ensured full compliance with European banking regulations including PSD2 and GDPR requirements</li>
+                        </ul>
+                    </div>
+
+                    <!-- Programming Instructor -->
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-title">Programming Instructor & Trainer</div>
+                                <div class="exp-company">SDA Albania / Protik Innovation Center</div>
+                            </div>
+                            <span class="exp-date">Feb 2024 - Dec 2025</span>
+                        </div>
+                        <ul class="exp-duties">
+                            <li>Designed and delivered comprehensive Java programming curriculum for multiple cohorts</li>
+                            <li>Developed practical workshops on relational databases, SQL optimisation, and database administration</li>
+                            <li>Guided students through Spring Boot application development with functional capstone projects</li>
+                            <li>Established software testing methodologies including JUnit, Mockito, and QA frameworks</li>
+                            <li>Mentored participants on industry-ready skills with majority securing employment after completion</li>
+                        </ul>
+                    </div>
+
+                    <!-- Junior Software Developer -->
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-title">Junior Software Developer</div>
+                                <div class="exp-company">Facilization</div>
+                            </div>
+                            <span class="exp-date">Sep 2022 - Oct 2023</span>
+                        </div>
+                        <ul class="exp-duties">
+                            <li>Developed custom banking solutions within Oracle Flexcube Core Banking System</li>
+                            <li>Designed and implemented multiple customised financial reports using Oracle BI Publisher</li>
+                            <li>Executed system retrofitting to latest Flexcube versions with zero data loss migrations</li>
+                            <li>Developed an Automated Testing Library for Oracle Banking Payments, significantly reducing regression testing time</li>
+                            <li>Conducted end-user training sessions for bank staff members on new system functionalities</li>
+                        </ul>
+                    </div>
+
+                    <!-- Internship -->
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-title">Software Developer Internship</div>
+                                <div class="exp-company">Facilization</div>
+                            </div>
+                            <span class="exp-date">Jul 2022 - Aug 2022</span>
+                        </div>
+                        <ul class="exp-duties">
+                            <li>Contributed to development and maintenance of Oracle-based core banking applications</li>
+                            <li>Collaborated with senior development team on feature design, implementation, and testing cycles</li>
+                            <li>Demonstrated rapid learning ability, leading to immediate full-time employment offer</li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            © 2026 Kevin Zogu | Senior Software Developer | Senior Software Engineer | Trainer – Software Development
+        </footer>
+    </div>
+</body>
+</html>
