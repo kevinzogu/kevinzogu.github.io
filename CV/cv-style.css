@@ -499,7 +499,8 @@ a:hover {
         padding: 0;
     }
     
-    .no-print {
+    .no-print,
+    .cv-actions {
         display: none !important;
     }
     
@@ -507,16 +508,23 @@ a:hover {
         box-shadow: none;
         border-radius: 0;
         max-width: 100%;
+        margin: 0;
     }
     
     .cv-header {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+        padding: 20px 30px;
     }
     
     .cv-sidebar {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+        padding: 15px 20px;
+    }
+    
+    .cv-main {
+        padding: 15px 25px;
     }
     
     .skill-tags.expertise .skill-tag,
@@ -527,16 +535,53 @@ a:hover {
     
     .cv-section {
         break-inside: avoid;
+        page-break-inside: avoid;
     }
     
     .experience-item {
         break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    .edu-item,
+    .cert-item,
+    .language-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    /* Force all elements to be visible - disable animations */
+    .experience-item,
+    .cv-section,
+    .edu-item,
+    .cert-item {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    
+    /* Reduce font sizes slightly for better fit */
+    .cv-name {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+    
+    .exp-duties {
+        font-size: 0.88rem;
+    }
+    
+    .summary-content p {
+        font-size: 0.9rem;
     }
 }
 
 @page {
     size: A4;
-    margin: 0;
+    margin: 10mm 12mm;
 }
 
 /* ===== Responsive Design ===== */

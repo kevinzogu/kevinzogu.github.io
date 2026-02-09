@@ -5,7 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const printBtn = document.getElementById('printCV');
     if (printBtn) {
         printBtn.addEventListener('click', function() {
-            window.print();
+            // Prepare page for printing - make all elements visible
+            prepareForPrint();
+            
+            // Wait a moment for rendering, then print
+            setTimeout(function() {
+                window.print();
+            }, 100);
         });
     }
 
@@ -57,8 +63,16 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(e) {
         if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
             e.preventDefault();
-            window.print();
+            prepareForPrint();
+            setTimeout(function() {
+                window.print();
+            }, 100);
         }
+    });
+
+    // Handle browser's print dialog (File > Print or other triggers)
+    window.addEventListener('beforeprint', function() {
+        prepareForPrint();
     });
 
     // Highlight current section in view (for navigation if added later)
@@ -85,6 +99,27 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('%c🚀 Kevin Zogu - Full Stack Developer', 'color: #1e3a5f; font-size: 20px; font-weight: bold;');
     console.log('%cLooking for the source code? Check out: https://github.com/kevinzogu', 'color: #0ea5e9; font-size: 14px;');
 });
+
+// Prepare page for printing - make all elements visible
+function prepareForPrint() {
+    // Get all animated elements
+    const animatedElements = document.querySelectorAll('.experience-item, .cv-section, .edu-item, .cert-item');
+    
+    // Force all elements to be visible and remove transforms
+    animatedElements.forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+        el.classList.add('animate-in');
+    });
+    
+    // Ensure all images are loaded
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        if (!img.complete) {
+            img.loading = 'eager';
+        }
+    });
+}
 
 // Smooth scroll to top function
 function scrollToTop() {
