@@ -1171,14 +1171,20 @@ img {
     }
     
     .section-title {
-        font-size: 1.6rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        font-size: 1.5rem;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        text-align: left;
     }
     
     .section-title::after {
-        display: none;
+        display: block;
+        max-width: 150px;
+    }
+    
+    .title-number {
+        font-size: 1rem;
     }
     
     .nav-menu {
@@ -1186,22 +1192,26 @@ img {
         top: 70px;
         left: 0;
         right: 0;
-        bottom: 0;
+        width: 100%;
+        height: auto;
+        max-height: calc(100vh - 70px);
         background: var(--white);
         flex-direction: column;
-        padding: 40px 30px;
-        gap: 25px;
+        padding: 30px;
+        gap: 20px;
         box-shadow: var(--shadow-lg);
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.3s ease-in-out;
         overflow-y: auto;
         z-index: 999;
-        visibility: hidden;
+        pointer-events: none;
     }
     
     .nav-menu.active {
-        transform: translateX(0);
-        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
     }
     
     .nav-link {
@@ -1452,8 +1462,20 @@ img {
     }
     
     .section-title {
-        font-size: 1.4rem;
-        margin-bottom: 30px;
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .section-title::after {
+        display: block;
+        max-width: 100px;
+    }
+    
+    .title-number {
+        font-size: 0.9rem;
     }
     
     .nav-container {
@@ -1466,8 +1488,14 @@ img {
     
     .nav-menu {
         top: 60px;
-        padding: 30px 20px;
-        z-index: 999;
+        padding: 25px 20px;
+        max-height: calc(100vh - 60px);
+        gap: 15px;
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+        padding: 12px 0;
     }
     
     .hero-social {
@@ -1918,12 +1946,19 @@ img {
     }
     
     .section-title {
-        font-size: 1.2rem;
-        margin-bottom: 25px;
+        font-size: 1.15rem;
+        margin-bottom: 20px;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .section-title::after {
+        max-width: 60px;
     }
     
     .title-number {
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
     
     .about-text p {
