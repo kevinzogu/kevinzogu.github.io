@@ -228,15 +228,18 @@ img {
     border: none;
     cursor: pointer;
     padding: 10px;
+    z-index: 1001;
+    position: relative;
 }
 
 .hamburger {
     display: block;
-    width: 25px;
-    height: 2px;
+    width: 28px;
+    height: 3px;
     background: var(--dark);
     position: relative;
     transition: var(--transition);
+    border-radius: 2px;
 }
 
 .hamburger::before,
@@ -247,14 +250,15 @@ img {
     height: 100%;
     background: var(--dark);
     transition: var(--transition);
+    border-radius: 2px;
 }
 
 .hamburger::before {
-    top: -8px;
+    top: -9px;
 }
 
 .hamburger::after {
-    top: 8px;
+    top: 9px;
 }
 
 /* ===== Hero Section ===== */
@@ -1189,12 +1193,15 @@ img {
         gap: 25px;
         box-shadow: var(--shadow-lg);
         transform: translateX(-100%);
-        transition: var(--transition);
+        transition: transform 0.3s ease-in-out;
         overflow-y: auto;
+        z-index: 999;
+        visibility: hidden;
     }
     
     .nav-menu.active {
         transform: translateX(0);
+        visibility: visible;
     }
     
     .nav-link {
@@ -1204,7 +1211,9 @@ img {
     }
     
     .nav-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .nav-toggle.active .hamburger {
@@ -1223,11 +1232,12 @@ img {
     
     .hero {
         min-height: auto;
-        padding: 100px 0 60px;
+        padding: 120px 0 70px;
     }
     
     .hero-container {
         text-align: center;
+        padding: 0 20px;
     }
     
     .hero-content {
@@ -1250,21 +1260,32 @@ img {
     }
     
     .hero-name {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
     }
     
     .hero-title {
-        font-size: 1.2rem;
-        min-height: 2rem;
+        font-size: 1.4rem;
+        min-height: 2.2rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-greeting {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
     }
     
     .hero-description {
-        font-size: 1rem;
+        font-size: 1.05rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .image-wrapper {
-        width: 250px;
-        height: 250px;
+        width: 280px;
+        height: 280px;
         margin: 0 auto;
     }
     
@@ -1446,28 +1467,49 @@ img {
     .nav-menu {
         top: 60px;
         padding: 30px 20px;
+        z-index: 999;
+    }
+    
+    .hero-social {
+        justify-content: center;
     }
     
     .hero {
-        padding: 80px 0 50px;
+        padding: 90px 0 50px;
+    }
+    
+    .hero-container {
+        text-align: center;
+    }
+    
+    .hero-content {
+        text-align: center;
     }
     
     .hero-greeting {
         font-size: 1rem;
+        margin-bottom: 8px;
     }
     
     .hero-name {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 12px;
     }
     
     .hero-title {
-        font-size: 1rem;
-        min-height: 1.5rem;
+        font-size: 1.15rem;
+        min-height: 1.8rem;
+        margin-bottom: 15px;
     }
     
     .hero-description {
         font-size: 0.95rem;
         line-height: 1.7;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
     }
     
     .hero-buttons {
