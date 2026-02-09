@@ -1,0 +1,843 @@
+/* ===== CV CSS Variables ===== */
+:root {
+    --cv-primary: #1e3a5f;
+    --cv-primary-light: #2c5282;
+    --cv-accent: #0ea5e9;
+    --cv-dark: #1a202c;
+    --cv-text: #2d3748;
+    --cv-text-light: #4a5568;
+    --cv-gray: #718096;
+    --cv-light: #f7fafc;
+    --cv-border: #e2e8f0;
+    --cv-white: #ffffff;
+    
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Reset ===== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--cv-text);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--cv-accent);
+}
+
+/* ===== Action Buttons ===== */
+.cv-actions {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-print {
+    background: var(--cv-white);
+    color: var(--cv-primary);
+    box-shadow: var(--shadow);
+}
+
+.btn-print:hover {
+    background: var(--cv-primary);
+    color: var(--cv-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-back {
+    background: transparent;
+    color: var(--cv-white);
+    border: 2px solid var(--cv-white);
+}
+
+.btn-back:hover {
+    background: var(--cv-white);
+    color: var(--cv-primary);
+}
+
+/* ===== CV Container ===== */
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--cv-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+/* ===== Header ===== */
+.cv-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 35px 40px;
+    background: linear-gradient(135deg, var(--cv-primary) 0%, var(--cv-primary-light) 100%);
+    color: var(--cv-white);
+}
+
+.header-photo img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    object-fit: cover;
+    box-shadow: var(--shadow-lg);
+}
+
+.header-content {
+    flex: 1;
+}
+
+.cv-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.cv-title {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 18px;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+}
+
+.contact-item i {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    width: 16px;
+    text-align: center;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Body Layout ===== */
+.cv-body {
+    display: flex;
+}
+
+/* ===== Sidebar ===== */
+.cv-sidebar {
+    width: 35%;
+    background: var(--cv-light);
+    padding: 25px 20px;
+    border-right: 1px solid var(--cv-border);
+}
+
+/* ===== Main Content ===== */
+.cv-main {
+    width: 65%;
+    padding: 25px 30px;
+}
+
+/* ===== Section Styles ===== */
+.cv-section {
+    margin-bottom: 25px;
+}
+
+.cv-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cv-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--cv-primary);
+    margin-bottom: 15px;
+}
+
+.section-title i {
+    font-size: 1rem;
+    color: var(--cv-accent);
+}
+
+/* ===== Skills ===== */
+.skill-group {
+    margin-bottom: 15px;
+}
+
+.skill-group:last-child {
+    margin-bottom: 0;
+}
+
+.skill-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--cv-primary);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.skill-tag {
+    background: var(--cv-white);
+    color: var(--cv-text);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid var(--cv-border);
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    background: var(--cv-accent);
+    color: var(--cv-white);
+    border-color: var(--cv-accent);
+}
+
+.skill-tags.expertise .skill-tag {
+    background: var(--cv-primary);
+    color: var(--cv-white);
+    border-color: var(--cv-primary);
+}
+
+/* ===== Languages ===== */
+.language-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background: var(--cv-white);
+    border-radius: 8px;
+    border: 1px solid var(--cv-border);
+}
+
+.lang-name {
+    font-weight: 600;
+    color: var(--cv-text);
+    font-size: 0.85rem;
+}
+
+.lang-level {
+    font-size: 0.75rem;
+    color: var(--cv-gray);
+    background: var(--cv-light);
+    padding: 3px 10px;
+    border-radius: 15px;
+}
+
+/* ===== Education ===== */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.edu-item {
+    padding-left: 15px;
+    border-left: 3px solid var(--cv-accent);
+}
+
+.edu-degree {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--cv-primary);
+    margin-bottom: 2px;
+}
+
+.edu-school {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--cv-text);
+    margin-bottom: 2px;
+}
+
+.edu-date {
+    font-size: 0.75rem;
+    color: var(--cv-gray);
+}
+
+/* ===== Certifications ===== */
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cert-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 12px;
+    background: var(--cv-white);
+    border-radius: 8px;
+    border: 1px solid var(--cv-border);
+}
+
+.cert-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--cv-text);
+}
+
+.cert-issuer {
+    font-size: 0.7rem;
+    color: var(--cv-gray);
+}
+
+/* ===== Additional Info ===== */
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--cv-text-light);
+}
+
+.info-item i {
+    color: var(--cv-accent);
+    width: 16px;
+    text-align: center;
+}
+
+/* ===== Summary ===== */
+.summary-content {
+    text-align: justify;
+}
+
+.summary-content p {
+    margin-bottom: 12px;
+    color: var(--cv-text-light);
+    line-height: 1.7;
+    font-size: 0.9rem;
+}
+
+.summary-content p:last-child {
+    margin-bottom: 0;
+}
+
+.summary-content strong {
+    color: var(--cv-primary);
+}
+
+/* ===== Experience ===== */
+.experience-item {
+    margin-bottom: 22px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--cv-border);
+}
+
+.experience-item.last,
+.experience-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.exp-info {
+    flex: 1;
+}
+
+.exp-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cv-primary);
+    margin-bottom: 2px;
+}
+
+.exp-company {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--cv-accent);
+}
+
+.exp-date {
+    font-size: 0.75rem;
+    color: var(--cv-gray);
+    background: var(--cv-light);
+    padding: 5px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.exp-duties {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.exp-duties li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: var(--cv-text-light);
+    line-height: 1.5;
+}
+
+.exp-duties li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--cv-accent);
+    font-weight: bold;
+}
+
+.exp-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.exp-tech span {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    background: var(--cv-primary);
+    color: var(--cv-white);
+    border-radius: 15px;
+    font-weight: 500;
+}
+
+/* ===== Footer ===== */
+.cv-footer {
+    text-align: center;
+    padding: 15px 20px;
+    background: var(--cv-light);
+    border-top: 1px solid var(--cv-border);
+    font-size: 0.8rem;
+    color: var(--cv-gray);
+}
+
+.cv-footer a {
+    color: var(--cv-accent);
+    font-weight: 500;
+}
+
+/* ===== Print Styles ===== */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+    
+    .cv-container {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+    }
+    
+    .cv-header {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .cv-sidebar {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .skill-tags.expertise .skill-tag,
+    .exp-tech span {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .cv-section {
+        break-inside: avoid;
+    }
+    
+    .experience-item {
+        break-inside: avoid;
+    }
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+/* ===== Responsive Design ===== */
+
+/* Tablets */
+@media (max-width: 900px) {
+    body {
+        padding: 15px;
+    }
+    
+    .cv-actions {
+        justify-content: center;
+    }
+    
+    .cv-header {
+        padding: 30px;
+    }
+    
+    .cv-name {
+        font-size: 1.8rem;
+    }
+    
+    .cv-sidebar {
+        width: 38%;
+        padding: 20px 15px;
+    }
+    
+    .cv-main {
+        width: 62%;
+        padding: 20px 25px;
+    }
+}
+
+/* Mobile Landscape / Small Tablets */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .cv-actions {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    
+    .btn-action {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .cv-container {
+        border-radius: 8px;
+    }
+    
+    .cv-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+        gap: 20px;
+    }
+    
+    .header-photo img {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .cv-name {
+        font-size: 1.6rem;
+    }
+    
+    .cv-title {
+        font-size: 0.9rem;
+    }
+    
+    .contact-grid {
+        justify-content: center;
+        gap: 10px 20px;
+    }
+    
+    .contact-item {
+        font-size: 0.8rem;
+    }
+    
+    /* Switch to single column layout */
+    .cv-body {
+        flex-direction: column;
+    }
+    
+    .cv-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--cv-border);
+        padding: 20px;
+    }
+    
+    .cv-main {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .section-title {
+        font-size: 0.9rem;
+    }
+    
+    .exp-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .exp-date {
+        align-self: flex-start;
+    }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .cv-actions {
+        margin-bottom: 10px;
+    }
+    
+    .btn-action {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+    
+    .cv-container {
+        border-radius: 6px;
+    }
+    
+    .cv-header {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+    
+    .header-photo img {
+        width: 90px;
+        height: 90px;
+        border-width: 3px;
+    }
+    
+    .cv-name {
+        font-size: 1.4rem;
+    }
+    
+    .cv-title {
+        font-size: 0.8rem;
+        margin-bottom: 12px;
+    }
+    
+    .contact-grid {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+    
+    .cv-sidebar,
+    .cv-main {
+        padding: 15px;
+    }
+    
+    .cv-section {
+        margin-bottom: 20px;
+    }
+    
+    .section-title {
+        font-size: 0.85rem;
+        gap: 8px;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .section-title i {
+        font-size: 0.9rem;
+    }
+    
+    .skill-group {
+        margin-bottom: 12px;
+    }
+    
+    .skill-label {
+        font-size: 0.75rem;
+        margin-bottom: 6px;
+    }
+    
+    .skill-tag {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+    
+    .language-item {
+        padding: 8px 10px;
+    }
+    
+    .lang-name {
+        font-size: 0.8rem;
+    }
+    
+    .lang-level {
+        font-size: 0.7rem;
+        padding: 2px 8px;
+    }
+    
+    .edu-item {
+        padding-left: 12px;
+    }
+    
+    .edu-degree {
+        font-size: 0.85rem;
+    }
+    
+    .edu-school {
+        font-size: 0.8rem;
+    }
+    
+    .edu-date {
+        font-size: 0.7rem;
+    }
+    
+    .cert-item {
+        padding: 8px 10px;
+    }
+    
+    .cert-name {
+        font-size: 0.75rem;
+    }
+    
+    .cert-issuer {
+        font-size: 0.65rem;
+    }
+    
+    .info-item {
+        font-size: 0.8rem;
+    }
+    
+    .summary-content p {
+        font-size: 0.85rem;
+        text-align: left;
+    }
+    
+    .experience-item {
+        margin-bottom: 18px;
+        padding-bottom: 18px;
+    }
+    
+    .exp-title {
+        font-size: 0.95rem;
+    }
+    
+    .exp-company {
+        font-size: 0.85rem;
+    }
+    
+    .exp-date {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+    
+    .exp-duties li {
+        font-size: 0.8rem;
+        padding-left: 15px;
+        margin-bottom: 5px;
+    }
+    
+    .exp-tech {
+        gap: 5px;
+    }
+    
+    .exp-tech span {
+        font-size: 0.65rem;
+        padding: 2px 8px;
+    }
+    
+    .cv-footer {
+        padding: 12px 15px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .cv-name {
+        font-size: 1.2rem;
+    }
+    
+    .cv-title {
+        font-size: 0.75rem;
+    }
+    
+    .header-photo img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .section-title {
+        font-size: 0.8rem;
+    }
+}
