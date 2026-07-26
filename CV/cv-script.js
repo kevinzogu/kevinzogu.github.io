@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Console message for developers
-    console.log('%c🚀 Kevin Zogu - Full Stack Developer', 'color: #1e3a5f; font-size: 20px; font-weight: bold;');
+    console.log('%c🚀 Kevin Zogu - Senior Software Developer', 'color: #1e3a5f; font-size: 20px; font-weight: bold;');
     console.log('%cLooking for the source code? Check out: https://github.com/kevinzogu', 'color: #0ea5e9; font-size: 14px;');
 });
 

@@ -26,11 +26,19 @@ A modern, responsive portfolio website showcasing my skills, experience, and pro
 ## 📁 Project Structure
 
 ```
-portfolio/
-├── index.html      # Main HTML file
-├── style.css       # All styles
-├── script.js       # JavaScript functionality
-└── README.md       # This file
+kevinzogu.github.io/
+├── index.html          # Portfolio homepage
+├── style.css           # Portfolio styles
+├── script.js           # Portfolio scripts
+├── CV-Formatted.md     # Long-form CV (markdown master)
+├── README.md           # This file
+└── CV/
+    ├── CV-Kevin-Zogu.html       # Styled, printable CV (European format)
+    ├── CV-Kevin-Zogu-ATS.html   # ATS-friendly CV for job portals
+    ├── cv-style.css             # CV styles
+    ├── cv-script.js             # CV scripts (print/animations)
+    └── assets/
+        └── profile.jpg          # Profile photo
 ```
 
 ## 🚀 Deployment to GitHub Pages

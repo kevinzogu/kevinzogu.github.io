@@ -16,7 +16,7 @@
 
 Results-driven Senior Software Developer with 4+ years of experience in enterprise software development, specialising in Java-based solutions for the banking and gaming industries. Proven track record in designing, developing, and maintaining mission-critical applications using Spring Boot, Oracle technologies, and microservices architecture. Successfully led technical teams through complex system upgrades and delivered solutions that enhanced operational efficiency and regulatory compliance.
 
-Demonstrated expertise in bridging technical development with knowledge transfer, combining hands-on software engineering with academic instruction. Committed to delivering high-quality, scalable solutions whilst adhering to European banking standards and best practices. Strong communicator with the ability to collaborate effectively across multicultural and cross-functional teams.
+Demonstrated expertise in bridging technical development with knowledge transfer, combining hands-on software engineering with academic instruction and independent remote consulting for international clients. Committed to delivering high-quality, scalable solutions whilst adhering to European banking standards and best practices. Strong communicator with the ability to collaborate effectively across multicultural and cross-functional teams.
 
 ---
 
@@ -49,6 +49,17 @@ Demonstrated expertise in bridging technical development with knowledge transfer
 
 ---
 
+### Senior Software Engineer (Freelance)
+**Self-Employed** | *July 2022 - Present* | *Remote*
+
+- Deliver end-to-end software engineering services to international clients on a remote contract basis, spanning architecture, development, and deployment
+- Design and build large-scale, high-availability backend systems using Java, Spring Boot, and microservices architecture
+- Develop RESTful APIs and system integrations, translating complex business requirements into production-ready solutions
+- Provide technical consulting, code reviews, and performance optimisation across the full software development lifecycle
+- Manage client relationships, project scoping, and delivery timelines independently
+
+---
+
 ### Programming Instructor & Trainer
 **SDA Albania / Protik Innovation Center** | *February 2024 - December 2025*
 
@@ -73,6 +84,7 @@ Demonstrated expertise in bridging technical development with knowledge transfer
 - Drove digital transformation initiatives by automating numerous banking workflows using Oracle technologies
 - Ensured full compliance with European banking regulations including PSD2 and GDPR requirements
 - Optimised database performance and system integration, achieving excellent system uptime for mission-critical applications
+
 ---
 
 ### Junior Software Developer
