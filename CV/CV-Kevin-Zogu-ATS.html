@@ -132,13 +132,18 @@
 
         /* Print */
         @media print {
-            body { background: #ffffff; padding: 0; font-size: 10.5pt; }
+            body { background: #ffffff; padding: 0; font-size: 10pt; }
+            .footer-note { display: none; }
+            h2 { margin: 14px 0 8px; }
+            li { margin-bottom: 2px; }
+            .job { margin-bottom: 12px; }
             .toolbar { display: none !important; }
             .page { box-shadow: none; max-width: 100%; padding: 0; }
-            .job, h2 { break-inside: avoid; page-break-inside: avoid; }
+            li, .job-meta { break-inside: avoid; page-break-inside: avoid; }
+            h2, h3, .job-meta { break-after: avoid; page-break-after: avoid; }
         }
 
-        @page { size: A4; margin: 14mm 16mm; }
+        @page { size: A4; margin: 12mm 15mm; }
 
         @media (max-width: 600px) {
             body { padding: 12px; }
@@ -151,13 +156,14 @@
     <div class="toolbar">
         <button onclick="window.print()">Print / Save as PDF</button>
         <a href="CV-Kevin-Zogu.html">Styled Version</a>
+        <a href="CV-Kevin-Zogu.docx" download>Download Word (.docx)</a>
         <a href="../index.html">Back to Portfolio</a>
     </div>
 
     <div class="page">
         <header>
             <h1>Kevin Zogu</h1>
-            <p class="role">Senior Software Developer | Senior Software Engineer | Trainer</p>
+            <p class="role">Senior Software Developer | Java &amp; Spring Boot | Banking, Payments &amp; Gaming Platforms</p>
             <p class="contact">
                 Tirana, Albania &nbsp;|&nbsp;
                 +355 68 39 03 809 &nbsp;|&nbsp;
@@ -169,7 +175,7 @@
 
         <section>
             <h2>Professional Summary</h2>
-            <p>Results-driven Senior Software Developer with 4+ years of experience specializing in Java-based solutions for banking, payments and online gaming. Proven track record in designing mission-critical applications using Spring Boot, Oracle technologies, and microservices architecture. Hands-on experience with Oracle Flexcube core banking and SWIFT/SEPA payment integrations for European and Middle Eastern financial institutions, and with real-time gaming platform integrations within the Flutter Entertainment group. Led technical teams through complex core-banking upgrades and also delivers independent backend engineering services to international clients.</p>
+            <p>Senior Software Developer with 4+ years of experience building Java and Spring Boot systems for online gaming, core banking and payments. At Sisal Hub Albania (Flutter Entertainment group) I design Game Play Integration (GPI) modules, including the PokerStars integration, high-volume RESTful APIs for internal and B2B partners, and Kafka-based event-driven microservices on Docker and Kubernetes. Before that I spent three years full-time at Facilization (now part-time), growing from intern to developer on Oracle Flexcube core banking and SWIFT/SEPA/TARGET2 payment modules for European and Middle Eastern banks, and leading the team through Flexcube 14.7 upgrades. I also take on remote freelance backend projects and have trained 100+ Java developers.</p>
         </section>
 
         <section>
@@ -177,8 +183,9 @@
             <p class="skills-line"><strong>Languages:</strong> Java, JavaScript, SQL, PL/SQL</p>
             <p class="skills-line"><strong>Frameworks:</strong> Spring Boot, Spring Data, Spring Security, Hibernate, OracleJet</p>
             <p class="skills-line"><strong>Databases:</strong> Oracle Database, PostgreSQL, MySQL</p>
-            <p class="skills-line"><strong>Tools &amp; DevOps:</strong> Docker, Kubernetes, Apache Kafka, REST APIs, Git, JDBC</p>
-            <p class="skills-line"><strong>Expertise:</strong> Software Architecture, System Integration, Data Migration, Software Testing</p>
+            <p class="skills-line"><strong>Tools &amp; DevOps:</strong> Docker, Kubernetes, Apache Kafka, REST APIs, Git, JDBC, JUnit 5, Mockito, AI-assisted development tools</p>
+            <p class="skills-line"><strong>Domain:</strong> Oracle Flexcube, Oracle Banking Payments (OBPM), Oracle BI Publisher, SWIFT, SEPA, TARGET2, Game Play Integration (GPI)</p>
+            <p class="skills-line"><strong>Expertise:</strong> Software Architecture, Microservices, Event-Driven Design, System Integration, Data Migration, Software Testing</p>
         </section>
 
         <section>
@@ -186,45 +193,51 @@
 
             <div class="job">
                 <h3>Senior Software Developer</h3>
-                <p class="job-meta">Sisal Hub Albania | June 2025 - Present | Tirana, Albania</p>
+                <p class="job-meta">Sisal Hub Albania | June 2025 - Present | Tirana, Albania (Hybrid)</p>
                 <ul>
-                    <li>Architect high-performance gaming platform solutions serving users across multiple European markets.</li>
-                    <li>Design Game Play Integration (GPI) modules, including the integration with PokerStars (Flutter Entertainment group), connecting external gaming providers via scalable RESTful APIs.</li>
-                    <li>Implement event-driven architecture using Apache Kafka for real-time data streaming and analytics.</li>
-                    <li>Deploy containerized microservices with Docker and Kubernetes, leading code reviews and quality standards.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Senior Software Engineer (Freelance)</h3>
-                <p class="job-meta">Self-Employed | July 2022 - Present | Remote</p>
-                <ul>
-                    <li>Deliver end-to-end software engineering for international clients on a remote contract basis, spanning architecture, development, and deployment.</li>
-                    <li>Design and build large-scale, high-availability backend systems with Java, Spring Boot, and microservices architecture.</li>
-                    <li>Develop RESTful APIs and system integrations, translating complex business requirements into production-ready solutions.</li>
-                    <li>Provide technical consulting, code reviews, and performance optimization across the full software development lifecycle.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Programming Instructor &amp; Trainer</h3>
-                <p class="job-meta">SDA Albania / Protik Innovation Center | February 2024 - December 2025 | Tirana, Albania</p>
-                <ul>
-                    <li>Designed and delivered Java programming curriculum from fundamentals to enterprise Spring Boot applications.</li>
-                    <li>Created hands-on workshops for JDBC, Hibernate ORM, SQL optimization, and database best practices.</li>
-                    <li>Established testing methodologies with JUnit and Mockito, guiding students through capstone projects.</li>
-                    <li>Mentored 100+ students, with the majority securing employment shortly after program completion.</li>
+                    <li>Architect and develop high-performance software solutions for a leading European gaming platform, serving users across multiple markets.</li>
+                    <li>Design and implement Game Play Integration (GPI) modules connecting the platform with multiple external gaming providers, including the PokerStars integration (Flutter Entertainment group).</li>
+                    <li>Build and maintain scalable RESTful APIs processing high-volume transactions for internal and B2B partners.</li>
+                    <li>Implement event-driven architecture with Apache Kafka for real-time data streaming and analytics.</li>
+                    <li>Deploy and manage containerized microservices with Docker and Kubernetes, improving deployment efficiency.</li>
+                    <li>Develop responsive front-end interfaces with OracleJet, improving user experience and accessibility.</li>
+                    <li>Lead code reviews and set quality standards, significantly reducing production defects.</li>
+                    <li>Use AI-assisted development tools to shorten delivery cycles and improve code quality.</li>
+                    <li>Collaborate with international teams across Italy and Albania to deliver aligned business solutions.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <h3>Software Developer</h3>
                 <p class="job-meta">Facilization | July 2022 - Present (part-time since June 2025) | Tirana, Albania</p>
+                <p class="job-meta">Progression: Software Developer (Nov 2023 – Present) · Junior Software Developer (Sep 2022 – Oct 2023) · Software Developer Intern (Jul – Aug 2022)</p>
                 <ul>
-                    <li>Developed Oracle Flexcube Universal Banking solutions for European and Middle Eastern financial institutions.</li>
-                    <li>Led Flexcube 14.7 upgrades with zero-downtime migrations and engineered SWIFT, SEPA, and TARGET2 payment modules.</li>
-                    <li>Created an automated testing library reducing regression time by 60% and built custom BI Publisher reports.</li>
-                    <li>Managed technical teams, authored FS/RS/DS documentation, and ensured PSD2 and GDPR compliance.</li>
+                    <li>Developed and integrated Oracle Flexcube Universal Banking and Oracle Banking Payments (OBPM) solutions for financial institutions across Europe and the Middle East.</li>
+                    <li>Engineered payment modules compliant with SWIFT, SEPA (AECH) and TARGET2 (AIPS), ensuring PSD2 and GDPR compliance.</li>
+                    <li>Led the technical team through Flexcube 14.7 upgrades and version retrofits with zero-downtime migrations and zero data loss.</li>
+                    <li>Built an automated testing library for Oracle Banking Payments, reducing regression testing time by 60%.</li>
+                    <li>Wrote PL/SQL migration scripts and stored procedures, and built custom Oracle BI Publisher reports.</li>
+                    <li>Authored FS/RS/DS documentation, provided UAT and production support within SLA, and trained bank staff.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>Programming Instructor &amp; Trainer (Part-time)</h3>
+                <p class="job-meta">SDA Albania / Protik Innovation Center | February 2024 - December 2025 | Tirana, Albania</p>
+                <ul>
+                    <li>Designed and delivered Java curriculum from fundamentals to enterprise Spring Boot applications.</li>
+                    <li>Ran hands-on workshops on SQL, JDBC, Hibernate ORM and testing with JUnit and Mockito.</li>
+                    <li>Mentored 100+ students through capstone projects, the majority securing employment shortly after completion.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>Senior Software Engineer (Freelance, Part-time)</h3>
+                <p class="job-meta">Self-Employed | July 2022 - Present | Remote</p>
+                <ul>
+                    <li>Deliver backend projects for international clients on a remote contract basis, from architecture to deployment.</li>
+                    <li>Build high-availability backend systems and REST integrations with Java, Spring Boot and microservices.</li>
+                    <li>Provide technical consulting, code reviews and performance optimization.</li>
                 </ul>
             </div>
         </section>
