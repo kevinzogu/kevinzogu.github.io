@@ -1,6 +1,6 @@
 # Kevin Zogu
 
-**Senior Software Developer | Senior Software Engineer | Trainer – Software Development**
+**Senior Software Developer | Java & Spring Boot | Banking, Payments & Gaming Platforms**
 
 ---
 
@@ -14,9 +14,7 @@
 
 ## Professional Summary
 
-Results-driven Senior Software Developer with 4+ years of experience in enterprise software development, specialising in Java-based solutions for the banking and gaming industries. Proven track record in designing, developing, and maintaining mission-critical applications using Spring Boot, Oracle technologies, and microservices architecture. Successfully led technical teams through complex system upgrades and delivered solutions that enhanced operational efficiency and regulatory compliance.
-
-Demonstrated expertise in bridging technical development with knowledge transfer, combining hands-on software engineering with academic instruction and independent remote consulting for international clients. Committed to delivering high-quality, scalable solutions whilst adhering to European banking standards and best practices. Strong communicator with the ability to collaborate effectively across multicultural and cross-functional teams.
+Senior Software Developer with 4+ years of experience building Java and Spring Boot systems for online gaming, core banking and payments. At **Sisal Hub Albania** (Flutter Entertainment group) I design Game Play Integration (GPI) modules, including the PokerStars integration, high-volume RESTful APIs for internal and B2B partners, and Kafka-based event-driven microservices on Docker and Kubernetes. Before that I spent three years full-time at **Facilization** (now part-time), growing from intern to developer on Oracle Flexcube core banking and SWIFT/SEPA/TARGET2 payment modules for European and Middle Eastern banks, and leading the team through Flexcube 14.7 upgrades. I also take on remote freelance backend projects and have trained 100+ Java developers.
 
 ---
 
@@ -27,7 +25,8 @@ Demonstrated expertise in bridging technical development with knowledge transfer
 | **Languages** | Java, JavaScript, SQL, PL/SQL |
 | **Frameworks** | Spring Boot, Spring Data, Spring Security, Hibernate, OracleJet |
 | **Databases** | Oracle Database, PostgreSQL, MySQL |
-| **Tools & Practices** | Docker, Kubernetes, Apache Kafka, RESTful APIs, Git, JDBC |
+| **Tools & Practices** | Docker, Kubernetes, Apache Kafka, RESTful APIs, Git, JDBC, JUnit 5, Mockito, AI-assisted development tools |
+| **Domain** | Oracle Flexcube, Oracle Banking Payments (OBPM), Oracle BI Publisher, SWIFT, SEPA, TARGET2, Game Play Integration (GPI) |
 | **Expertise** | Software Architecture, System Integration, Data Migration, Software Testing |
 
 ---
@@ -35,10 +34,10 @@ Demonstrated expertise in bridging technical development with knowledge transfer
 ## Professional Experience
 
 ### Senior Software Developer
-**Sisal Hub Albania** | *June 2025 - Present*
+**Sisal Hub Albania** | *June 2025 - Present* | *Tirana (Hybrid)*
 
 - Architect and develop high-performance software solutions for a leading European gaming platform, serving users across multiple markets
-- Design and implement Game Play Integration (GPI) modules, enabling seamless connectivity with multiple external gaming providers
+- Design and implement Game Play Integration (GPI) modules, enabling seamless connectivity with multiple external gaming providers, including the PokerStars integration (Flutter Entertainment group)
 - Build and maintain scalable RESTful APIs processing high-volume transactions for internal and B2B partners
 - Lead code review processes and establish quality standards, significantly reducing production defects
 - Implement event-driven architecture using Apache Kafka for real-time data streaming and analytics
@@ -49,32 +48,8 @@ Demonstrated expertise in bridging technical development with knowledge transfer
 
 ---
 
-### Senior Software Engineer (Freelance)
-**Self-Employed** | *July 2022 - Present* | *Remote*
-
-- Deliver end-to-end software engineering services to international clients on a remote contract basis, spanning architecture, development, and deployment
-- Design and build large-scale, high-availability backend systems using Java, Spring Boot, and microservices architecture
-- Develop RESTful APIs and system integrations, translating complex business requirements into production-ready solutions
-- Provide technical consulting, code reviews, and performance optimisation across the full software development lifecycle
-- Manage client relationships, project scoping, and delivery timelines independently
-
----
-
-### Programming Instructor & Trainer
-**SDA Albania / Protik Innovation Center** | *February 2024 - December 2025*
-
-- Designed and delivered comprehensive Java programming curriculum for multiple cohorts, covering fundamentals to advanced enterprise concepts
-- Developed practical workshops on relational databases, SQL optimisation, and database administration best practices
-- Created hands-on laboratory exercises for JDBC implementation with real-world banking and e-commerce scenarios
-- Instructed Hibernate ORM techniques for efficient database interactions and object-relational mapping
-- Guided students through Spring Boot application development, resulting in multiple functional capstone projects
-- Established software testing methodologies including JUnit, Mockito, and quality assurance frameworks
-- Mentored participants on industry-ready skills, with the majority securing employment shortly after completion
-
----
-
 ### Software Developer
-**Facilization** | *November 2023 - June 2025*
+**Facilization** | *November 2023 - Present (part-time since June 2025)*
 
 - Spearheaded development and integration of Oracle Flexcube Universal Banking and OBPM solutions for multiple financial institutions across Europe and the Middle East
 - Led requirements analysis and authored comprehensive Functional Specifications (FS), Requirements Specifications (RS), and Development Specifications (DS) documentation
@@ -110,6 +85,30 @@ Demonstrated expertise in bridging technical development with knowledge transfer
 - Gained hands-on experience with Oracle Database administration and data integration workflows
 - Acquired proficiency in debugging techniques, code optimisation, and software development lifecycle methodologies
 - Demonstrated rapid learning ability, leading to immediate full-time employment offer upon completion
+
+---
+
+### Programming Instructor & Trainer
+**SDA Albania / Protik Innovation Center** | *February 2024 - December 2025*
+
+- Designed and delivered comprehensive Java programming curriculum for multiple cohorts, covering fundamentals to advanced enterprise concepts
+- Developed practical workshops on relational databases, SQL optimisation, and database administration best practices
+- Created hands-on laboratory exercises for JDBC implementation with real-world banking and e-commerce scenarios
+- Instructed Hibernate ORM techniques for efficient database interactions and object-relational mapping
+- Guided students through Spring Boot application development, resulting in multiple functional capstone projects
+- Established software testing methodologies including JUnit, Mockito, and quality assurance frameworks
+- Mentored participants on industry-ready skills, with the majority securing employment shortly after completion
+
+---
+
+### Senior Software Engineer (Freelance, Part-time)
+**Self-Employed** | *July 2022 - Present* | *Remote*
+
+- Deliver end-to-end software engineering services to international clients on a remote contract basis, spanning architecture, development, and deployment
+- Design and build large-scale, high-availability backend systems using Java, Spring Boot, and microservices architecture
+- Develop RESTful APIs and system integrations, translating complex business requirements into production-ready solutions
+- Provide technical consulting, code reviews, and performance optimisation across the full software development lifecycle
+- Manage client relationships, project scoping, and delivery timelines independently
 
 ---
 
@@ -151,4 +150,4 @@ Demonstrated expertise in bridging technical development with knowledge transfer
 
 ---
 
-*© 2026 Kevin Zogu | Senior Software Developer | Senior Software Engineer | Trainer – Software Development*
+*© 2026 Kevin Zogu | Senior Software Developer*

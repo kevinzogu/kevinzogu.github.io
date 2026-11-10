@@ -447,6 +447,13 @@ a:hover {
     print-color-adjust: exact;
 }
 
+.exp-progression {
+    font-size: 0.78rem;
+    font-style: italic;
+    color: var(--cv-gray);
+    margin: -4px 0 8px;
+}
+
 .exp-date {
     font-size: 0.75rem;
     color: var(--cv-gray);
@@ -550,16 +557,25 @@ a:hover {
         print-color-adjust: exact;
     }
     
-    .cv-section {
+    /* Let long columns flow across pages (Chrome cannot split a flex row
+       whose children forbid breaking, which pushed everything to page 2) */
+    .exp-header,
+    .exp-duties li,
+    .skill-group {
         break-inside: avoid;
         page-break-inside: avoid;
     }
-    
-    .experience-item {
-        break-inside: avoid;
-        page-break-inside: avoid;
+
+    .section-title {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    .exp-duties li {
+        margin-bottom: 3px;
     }
     
+
     .edu-item,
     .cert-item,
     .language-item {
@@ -604,7 +620,7 @@ a:hover {
 /* ===== Responsive Design ===== */
 
 /* Tablets */
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
     body {
         padding: 15px;
     }
@@ -633,7 +649,7 @@ a:hover {
 }
 
 /* Mobile Landscape / Small Tablets */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     body {
         padding: 10px;
     }
@@ -713,7 +729,7 @@ a:hover {
 }
 
 /* Mobile Portrait */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     body {
         padding: 8px;
         background: linear-gradient(135deg, var(--cv-primary) 0%, var(--cv-primary-light) 100%);
@@ -885,7 +901,7 @@ a:hover {
 }
 
 /* Extra small devices */
-@media (max-width: 360px) {
+@media screen and (max-width: 360px) {
     .cv-name {
         font-size: 1.2rem;
     }
